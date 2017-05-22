@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tic-Tac-Toe</title>
+	<link rel="stylesheet" type="text/css" href="app.css">
+    <link href="https://fonts.googleapis.com/css?family=Kalam:400,700" rel="stylesheet">
+</head>
+<body>
+	<h1>Welcome to Tic-Tac-Toe</h1>
+    <table>
+        <thead>
+        <tr>
+            <td>Name</td>
+            <td>Age</td>
+        </tr>
+        </thead>
+        <tbody>
+        <% users.forEach(function(user){ %>
+            <tr>
+                <td><a href="/users/<%= user.id %>"><%= user.name %></a></td>
+                <td><%= user.age %></td>
+            </tr>
+        <% }) %>
+        </tbody>
+    </table>
+    <a href="/users/new">Add new user</a>
+    <a href="/users/rank">View users statistics</a>
+    <a href="/">Back</a>
+</body>
+</html>

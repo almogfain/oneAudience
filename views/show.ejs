@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tic-Tac-Toe</title>
+	<link rel="stylesheet" type="text/css" href="/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Kalam:400,700" rel="stylesheet">
+</head>
+<body>
+	<h1>User details</h1>
+    <p>User name: <%= user.name %></p>
+    <p>Age: <%= user.age %></p>
+    <h4>Statistics</h4>
+    <p>won <%= user.wins %> times</p>
+    <p>loss <%= user.games - user.wins %> times</p>
+    <a href="/">Home</a>
+    <form id="delete" action="/users/<%= user.id %>?_method=DELETE" method="POST">
+        <button>Delete user</button>
+    </form>
+</body>
+</html>

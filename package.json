@@ -1,0 +1,21 @@
+{
+  "name": "oneAudienceTicTacTow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-node app.js"
+  },
+  "author": "Almog Fainer",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "chart.js": "^2.5.0",
+    "ejs": "^2.5.6",
+    "express": "^4.15.3",
+    "fs": "0.0.1-security",
+    "jsonfile": "^3.0.0",
+    "method-override": "^2.3.9"
+  }
+}

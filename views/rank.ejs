@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tic-Tac-Toe</title>
+	<link rel="stylesheet" type="text/css" href="/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Kalam:400,700" rel="stylesheet">
+</head>
+<body>
+	<h1>Ranking Table</h1>
+    <table>
+        <thead>
+        <tr>
+            <td>Name</td>
+            <td>Wins</td>
+            <td>Losses</td>
+            <td>Total</td>
+        </tr>
+        </thead>
+        <tbody>
+        <% data.forEach(function(userData){ %>
+            <tr>
+                <td><%= userData.name %></td>
+                <td><%= userData.wins %></td>
+                <td><%= userData.games - userData.wins %></td>
+                <td><%= userData.wins * 2 + userData.games - userData.wins %></td>
+            </tr>
+        <% }) %>
+        </tbody>
+    </table>
+    <form id="delete" action="/games?_method=DELETE" method="POST">
+        <button>Start new league!</button>
+    </form>
+    <a href="/users">Back</a>
+    <canvas id="myChart" width="400" height="400"></canvas>
+    <script src="/scripts/chart.js/dist/Chart.js"></script>
+    <script type="text/javascript" src="/rankChart.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="tictactoe.css">
+</head>
+<body>
+	<h1>Tic Tac Toe</h1>
+    <div class="gameInfo">
+        <p id="p1" name="<%= player1.id %>">Player 1: <%= player1.name %> - x </p>
+        <p><a href="/users/<%= player1.id %>">show player 1 statistics</a></p>
+        <p id="p2" name="<%= player2.id %>">Player 2: <%= player2.name %> - o</p>
+        <p><a href="/users/<%= player2.id %>">show player 2 statistics</a></p>
+        <button id="restart">Start new game</button>
+        <a href="/">Change players</a>
+    </div>
+    <div id="board">
+        <table>
+            <tr>
+                <td><div id = "1" class="cell"><img id = "img1"/></div></td>
+                <td class="hor"><div id = "2" class="cell"><img id="img2"/></div></td>
+                <td><div id = "3" class="cell"><img id="img3"/></div></td>
+            </tr>
+            <tr>
+                <td class="ver"><div id = "4" class="cell"><img id="img4"/></div></td>
+                <td class="ver hor"><div id = "5" class="cell"><img id="img5"/></div></td>
+                <td class="ver"><div id = "6" class="cell"><img id="img6"/></div></td>
+            </tr>
+            <tr>
+                <td><div id = "7" class="cell"><img id="img7"/></div></td>
+                <td class="hor"><div id = "8" class="cell"><img id="img8"/></div></td>
+                <td><div id = "9" class="cell"><img id="img9"/></div></td>
+            </tr>
+        </table>
+    </div>
+	<script type="text/javascript" src="./game.js"></script>
+</body>
+</html>
